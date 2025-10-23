@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Once upon a knight & princesses | Classic Art Gallery</title>
+
+  <style>
+    :root {
+      --bg: #f5efe4; 
+      --brown: #7b5e47;
+      --dark: #3a2e27;
+      --text: #1c140f;
+    }
+
+    body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background: url('background.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text);
+}
+
+    header {
+      background-color: var(--brown);
+      color: var(--bg);
+      text-align: center;
+      padding: 2rem;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3rem 4rem;
+    }
+
+    .painting {
+      text-align: center;
+    }
+
+    .painting .frame {
+      background-color: var(--brown);
+      width: 100%;
+      aspect-ratio: 1 / 1.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+      transition: transform 0.3s ease;
+    }
+
+    .painting .frame:hover {
+      transform: scale(1.03);
+    }
+
+    .painting .frame {
+     background-color: var(--brown);
+     width: 100%;
+     aspect-ratio: 1 / 1.2;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #fff;
+     cursor: pointer;
+     position: relative;
+     overflow: hidden;
+     border-radius: 8px;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+
+.painting .frame:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+    .painting img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .painting h2 {
+      font-size: 1.3rem;
+      margin: 1rem 0 0.3rem 0;
+      color: var(--dark);
+    }
+
+    .painting p {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--dark);
+      opacity: 0.8;
+    }
+
+    .description-box {
+      display: none;
+      background: #fff;
+      color: var(--dark);
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 1px solid var(--brown);
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+
+    .painting.expanded .description-box {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>Once upon a Knight & Princess</header>
+</style>
+<div id="main-content" style="padding: 2rem; text-align: center;">
+<script> 
+
+  function showHome() {
+    const content = `
+     <img src="castle.png" alt="Kastil" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.25);"/>
+      <h1>Welcome to the Kingdom gallery</h1>
+      <p>Masuklah ke dunia para ksatria, putri, dan kisah abadi...</p>
+    `;
+    document.getElementById('main-content').innerHTML = content;
+  }
+  function showAbout() {
+    const content = `
+      <h2>About This Gallery</h2>
+      <p>This collection celebrates heroic tales and legends of old kingdoms.</p>
+    `;
+    document.getElementById('main-content').innerHTML = content;
+  }
+  showHome();
+</script>
+
+<body>
+  <div style="text-align:center; margin-top:1rem;">
+  <audio id="bg-music" loop>
+    <source src="wiegeOfficialInstrumental-ALIEN STAGE.mp3" type="audio/mpeg">
+  </audio>
+  <button onclick="toggleMusic()" style="background:#7b5e47; color:#fff; border:none; padding:0.5rem 1rem; font-family:'Playfair Display'; border-radius:5px; cursor:pointer;">
+    🎵 Play / Pause Music
+  </button>
+</div>
+
+<script>
+function toggleMusic() {
+  const music = document.getElementById('bg-music');
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+}
+</script>
+</body>
+
+  <section class="gallery">
+    <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="St.GeorgeandtheDragon.png" alt="St. George and the Dragon">
+      </div>
+      <h2>St. George and the Dragon</h2>
+      <p>Bernat Martorell, 1434-1435</p>
+      <div class="description-box">
+        Lukisan Saint George and the Dragon oleh Bernat Martorell dibuat pada tahin 1434-1435, menggambarkan legenda Santo George, ksatria yang menunggang kuda putih dan mengalahkan naga jahat untuk menyelamatkan seorang putri dan kota. Dengan gaya Gotik Internasional, lukisan ini kaya detail, menonjolkan keberanian, kesucian, dan kemenangan kebaikan atas kejahatan. Karya ini awalnya menjadi bagian altar di istana Catalonia dan kini dipamerkan di Art Institute of Chicago. Lukisan ini bukan hanya cerita heroik, tapi simbol keyakinan dan perlindungan spiritual.
+      </div>
+    </div>
+
+    <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="Theacolade.png" alt="The acolade">
+      </div>
+      <h2>The acolade</h2>
+      <p>Edmund Blair Leighton, 1901</p>
+      <div class="description-box">
+        Lukisan The Accolade oleh Edmund Blair Leighton, dibuat pada tahun 1901, menggambarkan momen upacara pengangkatan kesatria dalam tradisi Eropa abad pertengahan. Dalam karya ini, seorang raja atau ratu muda mengenakan jubah mewah dan mahkota sedang memberikan gelar kesatria dengan menyentuh bahu seorang ksatria yang berlutut menggunakan sisi datar pedang. Adegan ini disaksikan oleh orang-orang di latar belakang yang menjadi saksi upacara sakral tersebut. Lukisan bergaya realisme romantis ini menonjolkan nilai-nilai kesetiaan, kehormatan, dan pengabdian, serta kesan magis dan khidmat dari tradisi kesatria yang dihormati. Lukisan ini sering dianggap sebagai lambang idealisme dan etos kesatria yang abadi, memperlihatkan keindahan upacara pengukuhan dan semangat keberanian yang diapresiasi di budaya Eropa.
+      </div>
+    </div>
+
+    <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="Godspeed.png" alt="God speed">
+      </div>
+      <h2>God speed</h2>
+      <p>Blair Leighton, 1900</p>
+      <div class="description-box">
+        Lukisan God Speed oleh Edmund Blair Leighton, dibuat sekitar tahun 1900, menggambarkan seorang ksatria berbaju zirah yang bersiap meninggalkan kekasihnya untuk berperang. Dalam momen penuh haru ini, sang wanita mengikatkan pita merah﻿ di lengan ksatria sebagai simbol keberuntungan dan janji setia. Dengan gaya realisme romantis, lukisan ini menonjolkan nilai kesetiaan, pengorbanan, dan cinta yang kuat dalam tradisi kesatria abad pertengahan. God Speed adalah karya ikonik yang melambangkan keberanian dan harapan di tengah tantangan perang.
+      </div>
+    </div>
+
+    <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="Tristan&isolde.png" alt="Tristan & isolde">
+      </div>
+      <h2>Tristan & isolde</h2>
+      <p>Edmund Blair Leighton, 1902</p>
+      <div class="description-box">
+       Lukisan Tristan and Isolde karya Edmund Blair Leighton, dibuat tahun 1902, menggambarkan kisah romantis abad pertengahan tentang Tristan, seorang ksatria pemberani, dan Isolde, putri Irlandia. Dalam lukisan ini, pasangan kekasih tampak duduk bersama di taman marmar yang indah, menunjukkan kedekatan dan cinta mereka yang abadi. Cerita di balik lukisan ini berasal dari legenda tentang ramuan cinta yang membuat mereka tak terpisahkan, meskipun Isolde bertunangan dengan Raja Mark, paman Tristan. Karya ini menonjolkan tema kesetiaan, cinta terlarang, dan tragedi, serta memperlihatkan gaya detail dan romantisme khas Pre-Raphaelite yang kuat pada era awal abad ke-20.
+      </div>
+    </div>
+
+    <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="LaBelleDamesansMerci.png" alt="La Belle Dame sans Merci">
+      </div>
+      <h2>La Belle Dame sans Merci</h2>
+      <p>Sir Frank Dicksee, 1901-1902</p>
+      <div class="description-box">
+        Lukisan La Belle Dame sans Merci oleh Sir Frank Dicksee, dibuat sekitar tahun 1901-1902, menggambarkan adegan dari puisi berjudul sama karya John Keats. Lukisan ini menampilkan seorang ksatria muda berbaju zirah yang tampak terpikat oleh seorang wanita misterius bergaun merah, yang duduk di belakang seekor kuda hitam. Wanita tersebut adalah sosok la belle dame sans merci﻿, atau "wanita cantik tanpa ampun," yang dalam puisi Keats dikenal sebagai femme fatale yang memikat dan kemudian meninggalkan ksatria dalam kesedihan dan kehampaan. Dicksee menonjolkan nuansa romantis sekaligus magis dengan warna yang hidup dan detail yang dramatis, tapi melukis adegan sebelum akhir tragis dari cerita itu. Karya ini menjadi simbol pesona dan bahaya cinta yang menggoda serta dilema kesetiaan dan nasib tragis yang sering muncul dalam kesusastraan romantik abad ke-19.
+      </div>
+    </div>
+
+    <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="Thesouvenir.png" alt="The souvenir">
+      </div>
+      <h2>The souvenir</h2>
+      <p>Jean-Honoré Fragonard, 1776-1778</p>
+      <div class="description-box">
+        Lukisan The Souvenir karya Jean-Honoré Fragonard, dibuat sekitar tahun 1776-1778, menggambarkan seorang gadis muda yang sedang mengukir inisial kekasihnya pada batang pohon, sementara anjing kecil peliharaannya mengawasinya dengan setia. Adegan ini penuh dengan nuansa romantis dan kepolosan, menonjolkan tema cinta, kesetiaan, dan harapan muda. Gaun merah muda sang gadis dan detail lipatan satin dilukis dengan sangat halus sesuai gaya Rococo yang cerah dan elegan. Ukuran lukisan ini kecil, sekitar 25 x 19 cm, dan kini disimpan dalam koleksi Wallace Collection di London. Karya ini mencerminkan sensitivitas emosional khas abad ke-18, mengekspresikan perasaan cinta dan harapan dalam balutan estetika yang ringan dan penuh keindahan.
+      </div>
+    </div>
+
+    <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="Isabellaandthepotofbasil.png" alt="Isabella & the pot of basil">
+      </div>
+      <h2>Isabella & the pot of basil</h2>
+      <p>William Holman Hunt, 1868</p>
+      <div class="description-box">
+        Lukisan Isabella and the Pot of Basil karya William Holman Hunt, selesai pada tahun 1868, menggambarkan momen memilukan dari puisi John Keats yang diadaptasi dari kisah Giovanni Boccaccio. Dalam karya ini, Isabella, seorang wanita muda berambut panjang yang mengenakan gaun tipis dan tanpa alas kaki, meratapi pot basil yang diletakkan di atas meja berhiaskan kain mewah. Pot tersebut secara simbolis menyimpan kepala kekasihnya, Lorenzo, yang dibunuh oleh saudara-saudaranya karena cinta mereka terlarang. Lukisan ini dipenuhi detail interior bergaya Victoria dan simbolisme kematian serta cinta abadi yang penuh kesedihan. Karya ini menonjolkan kesan sensual dan emosional, sekaligus menghadirkan perpaduan antara keindahan dan tragis dalam estetika Pre-Raphaelite. Lukisan sekarang berada di Laing Art Gallery, Newcastle.​
+      </div>
+    </div>
+
+    <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="Ophelia.png" alt="Ophelia">
+      </div>
+      <h2>Ophelia</h2>
+      <p>Sir Everett Millais, 1851-1852</p>
+      <div class="description-box">
+       Lukisan Ophelia karya Sir John Everett Millais, dibuat antara tahun 1851-1852, adalah salah satu mahakarya dari aliran Prerafaelita yang terkenal. Lukisan ini menggambarkan momen tragis dari karakter Ophelia dalam drama Hamlet karya William Shakespeare, saat ia tenggelam di sungai dalam keadaan gila dan mulai menyanyi. Millais melukiskan Ophelia dengan detail alam yang luar biasa, menunjukkan wajahnya yang pucat dan ekspresi lemah, dengan rambut merah terurai dan gaun yang mengapung di air, dikelilingi bunga-bunga simbolis yang merefleksikan kepolosan, kesetiaan, dan kematian. Lukisan ini sangat mengesankan karena perpaduan antara realisme alam dan kekayaan emosi, menjadi ikon yang menggambarkan wanita yang rapuh namun kuat secara simbolis dalam kesedihan dan keindahan yang memilukan. Karya ini kini menjadi koleksi Tate Britain di London dan menjadi referensi penting dalam seni Victoria dan budaya populer.​
+      </div>
+    </div>
+
+    <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="Theswing.jpg" alt="The swing">
+      </div>
+      <h2>The swing</h2>
+      <p>Jean-Honoré Fragonard, 1767-1768</p>
+      <div class="description-box">
+        Lukisan The Swing oleh Jean-Honoré Fragonard, dibuat antara tahun 1767-1768, adalah salah satu karya ikonik Era Rokoko yang menampilkan suasana taman yang subur dan penuh warna. Gambar ini memperlihatkan seorang wanita muda berpakaian merah muda mewah sedang melayang tinggi di ayunan yang digerakkan oleh seorang pria tua yang hampir tersembunyi di balik bayang-bayang. Di bawah ayunan, seorang pria muda tersembunyi di semak-semak, memandang wanita itu dengan kekaguman dari posisi yang memungkinkan pandangannya mengintip ke bawah rok wanita tersebut. Wanita itu dengan ceria melempar sepatu kecilnya ke udara, menambah kesan genit dan nakal dalam adegan tersebut. Lukisan ini kaya akan simbolisme erotis dan menggambarkan suasana santai sekaligus penuh godaan yang populer di kalangan kelas atas Prancis abad ke-18. Karya ini kini menjadi koleksi Wallace Collection di London dan dianggap sebagai mahakarya yang mengekspresikan kemewahan serta kesenangan di era tersebut.
+      </div>
+    </div>
+
+ <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="Sirgalahad.jpg" alt="Sir galahad">
+      </div>
+      <h2>Sir galahad</h2>
+      <p>Frederic Watts, 1860-1862</p>
+      <div class="description-box">
+        Lukisan Sir Galahad karya George Frederic Watts, dibuat antara tahun 1860-1862, menggambarkan ksatria terkenal dari legenda Arthurian yang dikenal karena kesucian dan keberanian. Lukisan ini menampilkan Galahad yang khusyuk dan penuh tekad, sering digambarkan sebagai figur yang idealis dan penuh kedamaian. Watts memandang Galahad sebagai simbol kesucian, keberanian, dan keutamaan moral, yang dilambangkan dengan ekspresi wajah yang tenang serta atribut-atribut seperti baju zirah dan kuda. Karya ini menunjukkan minat Watts terhadap tema keagamaan dan moralitas, dan ada beberapa versi lukisan ini. Lukisan ini berada di koleksi Harvard Art Museums dan terlihat menonjol karena kedalaman emosional serta simbolisme keutamaan.
+      </div>
+    </div>    
+
+ <div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="Theknightatthecrossroad.png" alt="The kight at the crossroad">
+      </div>
+      <h2>The knight at the crossroad</h2>
+      <p>Viktor Vasnetsov, 1878</p>
+      <div class="description-box">
+        Lukisan The Knight at the Crossroads karya Viktor Vasnetsov, dibuat pada tahun 1878, adalah karya penting dari aliran Romantisisme dan Simbolisme yang menggambarkan seorang ksatria berdiri di persimpangan jalan yang sunyi dan tandus. Ksatria tersebut mengenakan baju zirah tradisional Rusia dan duduk di atas kuda putih, tampak merenung di depan sebuah batu bertuliskan peringatan suram mengenai pilihan jalannya. Di sekitar ksatria terdapat simbol-simbol kematian dan tanda-tanda alam, termasuk tengkorak dan burung gagak hitam, yang menambah nuansa mistis dan dramatis. Lukisan ini mengandung makna filosofis tentang takdir, pilihan hidup, dan perjalanan pahlawan, serta merefleksikan budaya dan legenda rakyat Rusia. Karya ini kini tersimpan di Museum Rusia, Saint Petersburg, dan menjadi ikon seni nasionalis romantik Rusia pada akhir abad ke-19.
+      </div>
+    </div>    
+
+<div class="painting" onclick="toggleDescription(this)">
+      <div class="frame">
+        <img src="Thevigil.png" alt="The vigil">
+      </div>
+      <h2>The vigil</h2>
+      <p>John Pettie, 1884</p>
+      <div class="description-box">
+        Lukisan The Vigil karya John Pettie, dibuat tahun 1884, menggambarkan momen sakral menjelang upacara penobatan kesatria pada abad pertengahan. Dalam lukisan ini, seorang calon ksatria berlutut di depan altar gereja, mengenakan jubah putih yang melambangkan kemurnian dan memegang pegangan pedang yang dipasang ke lantai, menunjukkan kesiapannya menjalani ritual kesetiaan dan pengabdian. Latar gereja dengan cahaya lembut yang masuk menambah suasana khidmat dan penuh kekhidmatan. The Vigil merekam tradisi keagamaan dan budaya ketika para ksatria harus melalui malam pengawasan dan doa sebelum menerima gelar kehormatan. Karya ini tersimpan di Tate Britain, London, dan dihargai karena penggambaran emosi serta detail sejarah yang kuat, mewakili nilai loyalitas dan keutamaan dalam zaman medieval.
+      </div>
+    </div>    
+
+  </section>
+
+  <script>
+    function toggleDescription(el) {
+      el.classList.toggle("expanded");
+    }
+  </script>
+
+<footer>
+   <p> Created by Shio | Music from Wiege-alnst </p>
+</footer>
+
+</body>
+</html>
